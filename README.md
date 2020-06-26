@@ -17,7 +17,7 @@ Our aim is two fold:
 3. As an intrepid traveller, I want to be able to access my planned itineraries _by downloading it to a local device_, even when I do not have quick access to WiFi/Cellular data, instead of hunting for hotspots or free WiFi areas.
 ## Why our Itinerary Generator?
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
-2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messsaging.
+2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
 ## Features
 - Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
 - Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for theh user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
@@ -66,7 +66,7 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 ~ IMAGES ~
 
 3. _Implementing Google Calendar_
-Thsi
+This
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
