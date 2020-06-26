@@ -20,7 +20,7 @@ Our aim is two fold:
 2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
 ## Features
 - Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
-- Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for theh user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
+- Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for the user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
 ### What if I don't have a Google Account?
 - Downloadable: The app also provides the option of downloading the itinerary as a PDF.
 - Telegram Bot: An additional feature to remind the user of the events they have to attend.
@@ -67,7 +67,11 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 3. _Implementing Google Calendar_
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
 **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
+
 ~ IMAGES ~
+
+4. _Login/Logout_
+This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
 
 ### Features to be Completed (Ideally by Milestone #3)
 1. _Addition of Constraints to Itinerary Generation_
@@ -75,35 +79,20 @@ As mentioned before, we plan to take into consideration opening/closing hours of
 **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
 
 2. _Complete UI/UX of the Website_
-Our current method of input is quite cumbersome for the user to enter values. We plan to fix this next milestone
-### Markdown
+Our current method of input is quite cumbersome for the user to enter values. We plan to fix this by the next milestone and provide a pleasant UI/UX experience for our users!
+**Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+3. _Telegram Notifications_
+We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application. 
+**Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
 
-```markdown
-Syntax highlighted code block
+4. _Downloadable PDF_
+There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
+**Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
 
-# Header 1
-## Header 2
-### Header 3
+5. _HomePage with Suggested Places_
+We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. 
+**Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sevenseasofbri/Orbital-README/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+6. _TESTING_
+While this is may not be a feature, it is imporatant that before the application goes into deployment, extensive testing of cases has to be done. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
