@@ -37,14 +37,11 @@ Features to be completed by the mid of July:
 - Telegram notifications.
 - Download PDF option.
 - More testing of cases.
-
- ## New Timeline
- 
- ### Current Implemented Features
- 
+## New Timeline
+### Current Implemented Features 
  1. _Basic Algorithm for Itinerary Generation_
  Due to time constraint (aka Special Term for both of us) we decided to implement Dijkstra's algorithm for optimising the itinerary. 
-**Need for this Feature:** The basis of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
+ **Need for this Feature:** The basis of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
 ```
 # Note: All nodes on a map are assumed to be connected, therefore creating a complete connected graph.
 # n is the number of places input by the user
@@ -62,7 +59,8 @@ Therefore, currently it takes only travel time into consideration. We plan to ad
 
 2. _Implementation of Google Maps API Key and its Functions_
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package- [geolib] (https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
-**Need for this feature:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation an
+**Need for this feature:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
+
 ~ IMAGES ~
 
 3. _Implementing Google Calendar_
