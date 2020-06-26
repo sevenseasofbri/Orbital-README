@@ -37,7 +37,9 @@ Features to be completed by the mid of July:
 - Telegram notifications.
 - Download PDF option.
 - More testing of cases.
+
  ## New Timeline
+ 
  ### Current Implemented Features
  
  1. _Basic Algorithm for Itinerary Generation_
