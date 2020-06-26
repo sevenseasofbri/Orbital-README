@@ -6,7 +6,7 @@
 ## Tech Stack
 This project is fuelled by [ReactJS](https://reactjs.org/), [NodeJS](https://nodejs.org/en/) and [MySQL](https://www.mysql.com/).
 ## Motivation
-As two international students in Singapore, we realised the difficulty of plannig schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
+As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
 ## Aim
 Our aim is two fold:
 - To create a highly optimised itinerary using [Google Maps API](https://developers.google.com/maps/documentation) based on time of transit and opening/closing hours of the places.
@@ -68,6 +68,14 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
 **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
 ~ IMAGES ~
+
+### Features to be Completed (Ideally by Milestone #3)
+1. _Addition of Constraints to Itinerary Generation_
+As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). 
+**Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
+
+2. _Complete UI/UX of the Website_
+Our current method of input is quite cumbersome for the user to enter values. We plan to fix this next milestone
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
