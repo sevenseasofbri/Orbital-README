@@ -4,7 +4,12 @@
 ## Proposed Level of Acheivement
 ### Gemini
 ## Tech Stack
-This project is fuelled by [ReactJS](https://reactjs.org/), [NodeJS](https://nodejs.org/en/) and [MySQL](https://www.mysql.com/).
+This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)](https://expressjs.com/) and [MySQL](https://www.mysql.com/).
+**Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
+**Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
+**MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
+## What has changed since Milestone #1?
+After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience. 
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
 ## Aim
