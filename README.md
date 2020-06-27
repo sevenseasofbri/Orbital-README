@@ -31,6 +31,7 @@ All people who want to be able to manage their travel with efficiency with the u
 2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
 ## Features
 - Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
+- Suggests places to travel to based on user inputs.
 - Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for the user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
 ### What if I don't have a Google Account?
 - Downloadable: The app also provides the option of downloading the itinerary as a PDF.
