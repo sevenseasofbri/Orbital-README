@@ -9,13 +9,19 @@ This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)]
 **Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
 **MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
 ## What has changed since Milestone #1?
-After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience. 
+After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience.
+## Project Management and Programming Practices
+We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").
+~IMAGE + TRELLO IMAGE ~
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
 ## Aim
-Our aim is two fold:
-- To create a highly optimised itinerary using [Google Maps API](https://developers.google.com/maps/documentation) based on time of transit and opening/closing hours of the places.
-- In addition to this, we aim to enable portability of the generated itinerary by importing it to the user's Google Calendar OR enabling PDF download.
+Our aim is three fold:
+- To create an optimised itinerary using [Google Maps API](https://developers.google.com/maps/documentation) based on time of transit and opening/closing hours of the places.
+- In addition to this, we aim to enable portability of the generated itinerary by importing it to the user's Google Calendar OR enabling PDF download OR sending reminders via Telegram bot.
+- To develop a personal user experience with suggested places and points of interest.
+## Target Audience
+All people who want to be able to manage their travel with efficiency with the use of a web application. Here, efficiency translates to be able to get suggested places for travel, generate itinerary as well as provide the itinerary to the user in an appropriate manner.
 ## User Stories
 1. As busy businessperson, whilst on trips, I really want to be able to plan my travel itinerary _easily on the go and accessible on a platform like Google Calendars_ rather than having to write it down and fear missing something out.
 2. As a resident in a new city, I want to be able commute to run my errands in a timely fashion with a _highly optimised schedule_.
@@ -47,7 +53,7 @@ Features to be completed by the mid of July:
 
  1. _Basic Algorithm for Itinerary Generation_
  Due to time constraint (aka Special Term for both of us) we decided to implement Dijkstra's algorithm for optimising the itinerary. 
- **Need for this Feature:** The basis of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
+ **Need for this Feature:** An important part of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
 ```
 # Note: All nodes on a map are assumed to be connected, therefore creating a complete connected graph.
 # n is the number of places input by the user
