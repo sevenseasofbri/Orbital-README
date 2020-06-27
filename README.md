@@ -13,7 +13,6 @@ After careful consideration, reading feedbacks and constant deliberation, we hav
 ## Project Management and Programming Practices
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").
 ![](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
-![](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(155).png)
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
 ## Aim
