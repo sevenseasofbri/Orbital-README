@@ -14,7 +14,7 @@ After careful consideration, reading feedbacks and constant deliberation, we hav
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").
 ![](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
 ## Motivation
-As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey in a personalised and effective manner.
+As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of places of interest in Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey **anywhere in the world** in a personalised and effective manner.
 ## Aim
 Our aim is three fold:
 - To create an optimised itinerary using [Google Maps API](https://developers.google.com/maps/documentation) based on time of transit and opening/closing hours of the places.
@@ -82,7 +82,11 @@ This allows the user to import the generated itinerary to the Google Calendar wh
 
 ~ IMAGES ~
 
-4. _Login/Logout_
+4. _Downloadable PDF_
+There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
+**Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
+
+5. _Login/Logout_
 This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
 
 ### Features to be Completed (Ideally by Milestone #3)
@@ -98,13 +102,9 @@ Our current method of input is quite cumbersome for the user to enter values. We
 We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application. 
 **Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
 
-4. _Downloadable PDF_
-There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
-**Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
-
-5. _HomePage with Suggested Places_
+4. _HomePage with Suggested Places_
 We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. 
 **Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
 
-6. _TESTING_
+5. _TESTING_
 While this is may not be a feature, it is imporatant that before the application goes into deployment, extensive testing of cases has to be done. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
