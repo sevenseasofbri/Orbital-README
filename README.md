@@ -2,7 +2,7 @@
 ## Team Members
 ### Leah Roselyn James and Vishruti Ranjan
 ## Proposed Level of Acheivement
-### Gemini
+### Apollo 11
 ## Tech Stack
 This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)](https://expressjs.com/) and [MySQL](https://www.mysql.com/).
 **Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
