@@ -93,7 +93,7 @@ This allows the user to import the generated itinerary to the Google Calendar wh
  - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
  - **Other Calender exmaples in detail can be seen in the video**
  
- - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were permforiming unit testing for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
+ - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were **performing unit testing** for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
 
  
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
@@ -160,10 +160,11 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 **As we progress and add more features we will follow  Liskov's Substitution Principle while implementing class single dependence.**
 
 ### Current Testing and Security Features 
-1. Like all programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and a **15 rounds of manual acceptance tesing**.
 
-2. Our Calendar features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
+1. Like many programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
+
+2. Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
 
 **Security feature** 
 
-3. For our Login page, if the backend detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration
+3. For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
