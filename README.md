@@ -26,6 +26,7 @@ All people who want to be able to manage their travel with efficiency with the u
 1. As busy businessperson, whilst on trips, I really want to be able to plan my travel itinerary _easily on the go and accessible on a platform like Google Calendars_ rather than having to write it down and fear missing something out.
 2. As a resident in a new city, I want to be able commute to run my errands in a timely fashion with a _highly optimised schedule_.
 3. As an intrepid traveller, I want to be able to access my planned itineraries _by downloading it to a local device_, even when I do not have quick access to WiFi/Cellular data, instead of hunting for hotspots or free WiFi areas.
+4. I am interested in exploring the city I wish I could have a app that allows me to search for places of interest and add them to my llist within the same website without migrating back and forth between different sites.
 ## Why our Itinerary Generator?
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
@@ -111,11 +112,18 @@ We plan to add suggested places on the home page for the user either based on pr
 5. _TESTING_
 While this is may not be a feature, it is imporatant that before the application goes into deployment, although we have done quite a bit of tetsing, more extensive testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
 
+### Agile Design Principles Used Primarily
 
-### Testing already done
-1.Like all programs ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and perfomed at least 30 different location testing to ensure that our algorithm was working as it was supposed to.
+1.Dependency Injection: We ahve decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth botton up testing** of our unit tests. Although there was single dependency in the cases where the calender and pdf generation depend on the the itinerary stored in the class.
 
-2.Our Calender features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones.
+2.Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
+
+As we progress and add more features we wil follow the LSP prince in dependence.
+
+### Current Testing and Security Features 
+1.Like all programs ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and perfomed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **itegration testing**  with other features like calender and a **15 rounds of manual accpetance tesing**.
+
+2.Our Calender features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
 
 **Security feature** 
 
