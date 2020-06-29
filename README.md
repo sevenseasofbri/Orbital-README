@@ -38,7 +38,7 @@ All people who want to be able to manage their travel with efficiency with the u
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
 
-## Features
+## Brief Introduction To Features  (**PLEASE REFER TO NEW TIMELINE FOR DETAILED EXPLANATION OF EACH FEATURE**)
 - Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
 - Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for the user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
@@ -96,7 +96,7 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
  - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
  - **Other Calender exmaples in detail can be seen in the video**
- - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were **performing unit testing** for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
+ - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were **performing unit testing** for Google Calender we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
 
  
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
@@ -141,7 +141,13 @@ We plan to add suggested places on the home page for the user either based on pr
 While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
 
 
-## Software Engineering Practices and Principles applied :
+## Software Engineering Practices and Principles Applied :
+
+
+### Program Flow and Design 
+
+1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
 
 ### Project Management and Programming Practices
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
@@ -177,7 +183,4 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
 
-### Program Flow and Design 
-
-![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
 
