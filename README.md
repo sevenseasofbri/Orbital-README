@@ -90,13 +90,14 @@ Our current implementation uses Google Places Autocomplete API for the user to b
  - **Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
  - **Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
  - **Links to User Story 1**
+ 
+ 
 ![Delete Feature](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(305).png)
 
 3. **_Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
  - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
  - **Other Calender exmaples in detail can be seen in the video**
- 
  - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were **performing unit testing** for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
 
  
@@ -122,6 +123,8 @@ This feature had already been implemented in the last phase of the project. This
 As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). We will alert the user if the timings do not fit the constraints so thatt the user can make the relevant changes in timings.
   - **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
   - **Links to User Story 2**
+
+
 2. **_Complete UI/UX of the Website_**
 Our current method of input is quite cumbersome for the user to enter values. We plan to fix this by the next milestone and provide a pleasant UI/UX experience for our users!
   - **Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
