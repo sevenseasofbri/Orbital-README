@@ -134,12 +134,11 @@ We plan to add suggested places on the home page for the user either based on pr
 While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
 
 
-
 ## Software Engineering Practices and Principles applied :
 
 ### Project Management and Programming Practices
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
-We took the feeback from Milestone 1 and decided to keep document and keep track of our features through trello.
+We took the feedback from Milestone 1 and decided to ensure documentation and keep track of our features through trello and a more detailed README.
 
 - **Github**
 ![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
@@ -152,17 +151,17 @@ We took the feeback from Milestone 1 and decided to keep document and keep track
 
 ### Agile Design Principles Used Primarily
 
-1.Dependency Injection: We ahve decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth botton up testing** of our unit tests. Although there was single dependency in the cases where the calender and pdf generation depend on the the itinerary stored in the class.
+1. Dependency Injection: We have decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth bottom-up testing** of our unit tests. Although there was a single dependency in the cases where the calendar and pdf generation depend on the itinerary stored in the class.
 
-2.Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
+2. Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js, and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
 
-As we progress and add more features we wil follow  Liskov Substitution Principle while implenting class single dependence.
+**As we progress and add more features we will follow  Liskov's Substitution Principle while implementing class single dependence.**
 
 ### Current Testing and Security Features 
-1.Like all programs ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and perfomed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **itegration testing**  with other features like calender and a **15 rounds of manual acceptance tesing**.
+1. Like all programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and a **15 rounds of manual acceptance tesing**.
 
-2.Our Calender features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
+2. Our Calendar features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
 
 **Security feature** 
 
-3.For our Login page, if the database detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration.
+3. For our Login page, if the backend detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration
