@@ -85,11 +85,11 @@ This allows the user to import the generated itinerary to the Google Calendar wh
 
 4. _Downloadable PDF_
 There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
-**Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
+-**Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
 
 5. _Login/Logout_ (**Security feature**)
 This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
-- **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
+-**Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
 ### Features to be Completed (Ideally by Milestone #3)
 1. _Addition of Constraints to Itinerary Generation_
@@ -117,4 +117,6 @@ While this is may not be a feature, it is imporatant that before the application
 
 2.Our Calender features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones.
 
-3. **Security feature** For our Login page, if the database detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration.
+**Security feature** 
+
+3.For our Login page, if the database detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration.
