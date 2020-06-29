@@ -94,7 +94,7 @@ This feature had already been implemented in the last phase of the project. This
 
 ### Features to be Completed (Ideally by Milestone #3)
 1. _Addition of Constraints to Itinerary Generation_
-As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). 
+As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). We will alert the user if the timings do not fit the constraints so thatt the user can make the relevant changes in timings.
 -**Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
 
 2. _Complete UI/UX of the Website_
@@ -102,11 +102,11 @@ Our current method of input is quite cumbersome for the user to enter values. We
 -**Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
 
 3. _Telegram Notifications_
-We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application. 
+We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application, notification will be sent they are supposed to start spending time in that places and a notification will be send when they are supposed to leave. These timings will be inputted by the user itself according to his preferences. Can be seen in the video 
 -**Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
 
 4. _HomePage with Suggested Places_
-We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on.
+We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on to find more information. This will act as the homepage when the user first does a login. The user can either input a location around which he/she wants to visit places or interest or if nothing is inputted then the places of interest are based on the users current location and previous itinerary.
 -**Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
 
 5. _TESTING_
@@ -118,7 +118,7 @@ While this is may not be a feature, it is imporatant that before the application
 
 2.Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
 
-As we progress and add more features we wil follow the LSP prince in dependence.
+As we progress and add more features we wil follow  Liskov Substitution Principle while implenting class single dependence.
 
 ### Current Testing and Security Features 
 1.Like all programs ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and perfomed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **itegration testing**  with other features like calender and a **15 rounds of manual accpetance tesing**.
