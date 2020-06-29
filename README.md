@@ -183,4 +183,10 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
 
+# Draft Plan for Milestone 3 
 
+**Rough idea of how we will start the approach for Milestone 3 in steps**
+1. Save the previous itinerary in the Database to suggest places of interest to  the user the next time they log in.
+2. Start imporvement of UI/UX of the page. Literature review of Telegram API.
+3. Implement telegram bot.
+4. Optimise itinerary with opening/closing hours.
