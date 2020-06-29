@@ -10,6 +10,8 @@ This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)]
 - **MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
 ## What has changed since Milestone #1?
 After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience.
+### Our Updated Poster with New Features
+![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/poster.png)
 
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of places of interest in Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey **anywhere in the world** in a personalised and effective manner.
