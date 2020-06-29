@@ -5,9 +5,9 @@
 ### Apollo 11
 ## Tech Stack
 This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)](https://expressjs.com/) and [MySQL](https://www.mysql.com/).
--**Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
--**Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
--**MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
+- **Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
+- **Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
+- **MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
 ## What has changed since Milestone #1?
 After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience.
 
@@ -89,8 +89,10 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 3. **_Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
  - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
- - **Links to User Story 3:** A week ago, on the 22nd of June while we were permforiming unit testing for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on the 26th of June we received a reminder and realised how useful a feature it was and decided to take a screen shot to link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule.
  - **Other Calender exmaples in detail can be seen in the video**
+ 
+ - **Picture below links to User Story 3:** A week ago, on the 22nd of June while we were permforiming unit testing for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on **the 26th of June we received a reminder and realised how useful the feature was** and decided to take a screen shot to **link this to the user story mentioned to demostrate how it can be a useful tool to keep track of a schedule**.
+
  
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
 
