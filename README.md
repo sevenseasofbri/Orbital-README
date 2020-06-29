@@ -5,9 +5,9 @@
 ### Apollo 11
 ## Tech Stack
 This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)](https://expressjs.com/) and [MySQL](https://www.mysql.com/).
-**Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
-**Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
-**MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
+-**Why React?** ReactJS has extensive documentation and a large community of users to aid in online learning as compared to others such as Angular etc. Features such as being able to change data without reloading the page are in-line with features we want to implement in our application.
+-**Why Express?** We had initially decided to use PHP, but on further research, after liftoff we decided to go with Express JS as our backend framework. This would help us maintain a sense of consistency as both React and Express are based on JavaScript.
+-**MySQL?** It is one of the most widely used databases in the world as well as relatively simple to use.
 ## What has changed since Milestone #1?
 After careful consideration, reading feedbacks and constant deliberation, we have reimagined the purpose this application was meant to solve. A common critique was that the application did not provide adequate portability through smartphones. Thus, slightly changing our course of direction- but keeping the basic aspects of our initial features. The core feature of our app no longer focuses only our generated itinerary but shares equal weightage with our newer features like importing to google calendar, setting reminders via Telegram, suggested places and downloadable PDF. This would mean we would steer away from the many constraints that our algorithm would have otherwise taken into consideration and rather focus our time and energy by distributing equal efforts to implement all these features for an all round user experience.
 ## Project Management and Programming Practices
@@ -54,7 +54,7 @@ Features to be completed by the mid of July:
 
  1. _Basic Algorithm for Itinerary Generation_
  Due to time constraint (aka Special Term for both of us) we decided to implement Dijkstra's algorithm for optimising the itinerary. 
- **Need for this Feature:** An important part of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
+ -**Need for this Feature:** An important part of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
 ```
 # Note: All nodes on a map are assumed to be connected, therefore creating a complete connected graph.
 # n is the number of places input by the user
@@ -72,14 +72,14 @@ Therefore, currently it takes only travel time into consideration. We plan to ad
 
 2. _Implementation of Google Maps API Key and its Functions_
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
-**Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
-**Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
+-**Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
+-**Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
 
 ~ IMAGES ~
 
 3. _Implementing Google Calendar_
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
-**Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
+-**Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
 
 ~ IMAGES ~
 
@@ -89,26 +89,32 @@ There will be an option to allow the user to download the created itinerary loca
 
 5. _Login/Logout_ (**Security feature**)
 This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
-**Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
+- **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
 ### Features to be Completed (Ideally by Milestone #3)
 1. _Addition of Constraints to Itinerary Generation_
 As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). 
-**Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
+-**Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
 
 2. _Complete UI/UX of the Website_
 Our current method of input is quite cumbersome for the user to enter values. We plan to fix this by the next milestone and provide a pleasant UI/UX experience for our users!
-**Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
+-**Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
 
 3. _Telegram Notifications_
 We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application. 
-**Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
+-**Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
 
 4. _HomePage with Suggested Places_
 We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on.
-**Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
+-**Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
 
 5. _TESTING_
-While this is may not be a feature, it is imporatant that before the application goes into deployment, extensive testing of cases has to be done. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
+While this is may not be a feature, it is imporatant that before the application goes into deployment, although we have done quite a bit of tetsing, more extensive testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
 
 
+### Testing already done
+1.Like all programs ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via console.log and perfomed at least 30 different location testing to ensure that our algorithm was working as it was supposed to.
+
+2.Our Calender features also had unknown bugs to begin with like the feature of recurrence that we had to disable. We tested the ability of it to set reminders and we were able to recieve those notifications on our mobile Phones.
+
+3. **Security feature** For our Login page, if the database detects that the user is not registered an incorrect input alert and redirects back to the Registration page. This feature can be seen in the video. We also used jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration.
