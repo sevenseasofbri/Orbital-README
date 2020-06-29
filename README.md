@@ -1,7 +1,5 @@
-![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/itigen.png)
-
-
 # Welcome to Pyroclastic Nerds' itigen
+![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/itigen.png)
 
 ## Team Members
 ### Leah Roselyn James and Vishruti Ranjan
@@ -177,3 +175,9 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 **2. Security feature**  
 
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
+
+
+### Program Flow and Design 
+
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
+
