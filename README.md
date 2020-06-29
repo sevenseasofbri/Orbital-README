@@ -1,4 +1,4 @@
-# Welcome to Pyroclastic Nerds' Itinerary Generator
+# Welcome to Pyroclastic Nerds' "itigen"
 ## Team Members
 ### Leah Roselyn James and Vishruti Ranjan
 ## Proposed Level of Acheivement
@@ -72,7 +72,8 @@ Therefore, currently it takes only travel time into consideration. We plan to ad
 
 2. _Implementation of Google Maps API Key and its Functions_
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
-**Need for this feature:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
+**Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
+**Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
 
 ~ IMAGES ~
 
@@ -86,8 +87,9 @@ This allows the user to import the generated itinerary to the Google Calendar wh
 There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
 **Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
 
-5. _Login/Logout_
+5. _Login/Logout_ (**Security feature**)
 This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
+**Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
 ### Features to be Completed (Ideally by Milestone #3)
 1. _Addition of Constraints to Itinerary Generation_
@@ -103,8 +105,10 @@ We plan to create a telegram bot linked to this application which will remind th
 **Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
 
 4. _HomePage with Suggested Places_
-We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. 
+We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on.
 **Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
 
 5. _TESTING_
 While this is may not be a feature, it is imporatant that before the application goes into deployment, extensive testing of cases has to be done. This will hlp us clear out any bugs, hiccups and loose ends in our codes and remove them in time.
+
+
