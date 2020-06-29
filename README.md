@@ -66,7 +66,7 @@ Features to be completed by the mid of July:
 ## New Timeline
 ### Features that have been Completed
 
-1. **_Basic Algorithm for Itinerary Generation_**
+**1. _Basic Algorithm for Itinerary Generation_**
  Due to time constraint (aka Special Term for both of us) we decided to implement Dijkstra's algorithm for optimising the itinerary. 
   - **Need for this Feature:** An important part of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
   - **Links to User Story 2**
@@ -85,7 +85,7 @@ LOOP( i from 1 to n times){
 ```
 Therefore, currently it takes only travel time into consideration. We plan to add the opening/closing hours constraint in the next phase for the final milestone.
 
-2. **_Implementation of Google Maps API Key and its Functions_**
+**2. _Implementation of Google Maps API Key and its Functions_**
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
  - **Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
  - **Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
@@ -94,7 +94,7 @@ Our current implementation uses Google Places Autocomplete API for the user to b
  
 ![Delete Feature](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(305).png)
 
-3. **_Implementing Google Calendar_**
+**3. _Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
  - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
  - **Other Calender exmaples in detail can be seen in the video**
@@ -104,14 +104,14 @@ This allows the user to import the generated itinerary to the Google Calendar wh
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
 
 
-4. **_Downloadable PDF_**
+**4. _Downloadable PDF_**
 There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
  - **Need for this feature:** In the event a user does not have Telegram OR a Google Account, they can choose to store their generated itinerary locally on their device. Moreover, it will be useful if the user does not have access to internet and cannot open the Web-App to find their saved itinerary.
  - **Links to User Story 4**
   
 ![Download pdf](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(306).png)
 
-5. **_Login/Logout_** (**Security feature**)
+**5. _Login/Logout_** (**Security feature**)
 This feature had already been implemented in the last phase of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
 - **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
@@ -119,27 +119,27 @@ This feature had already been implemented in the last phase of the project. This
 
 ### Features to be Completed (Ideally by Milestone #3)
 
-1. **_Addition of Constraints to Itinerary Generation_**
+**1. _Addition of Constraints to Itinerary Generation_**
 As mentioned before, we plan to take into consideration opening/closing hours of places the users want to visit to help generate the desired itinerary. This will require us to revamp our algorithm to withstand more testing in terms of accuracy (eg. Restaurant timings). We will alert the user if the timings do not fit the constraints so thatt the user can make the relevant changes in timings.
   - **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
   - **Links to User Story 2**
 
 
-2. **_Complete UI/UX of the Website_**
+**2. _Complete UI/UX of the Website_**
 Our current method of input is quite cumbersome for the user to enter values. We plan to fix this by the next milestone and provide a pleasant UI/UX experience for our users!
   - **Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
 
-3. **_Telegram Notifications_**
+**3. _Telegram Notifications_**
 We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application, notification will be sent they are supposed to start spending time in that places and a notification will be send when they are supposed to leave. These timings will be inputted by the user itself according to his preferences. Can be seen in the video 
   - **Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
   - **Links to User Story 3**
   
-4. **_HomePage with Suggested Places_**
+**4. _HomePage with Suggested Places_**
 We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on to find more information. This will act as the homepage when the user first does a login. The user can either input a location around which he/she wants to visit places or interest or if nothing is inputted then the places of interest are based on the users current location and previous itinerary.
   - **Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
   - **Links to User Story 5**
   
-5. **_TESTING_**
+**5. _TESTING_**
 While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
 
 
