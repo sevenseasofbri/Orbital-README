@@ -13,28 +13,36 @@ After careful consideration, reading feedbacks and constant deliberation, we hav
 
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of places of interest in Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey **anywhere in the world** in a personalised and effective manner.
+
 ## Aim
 Our aim is three fold:
 - To create an optimised itinerary using [Google Maps API](https://developers.google.com/maps/documentation) based on time of transit and opening/closing hours of the places.
 - In addition to this, we aim to enable portability of the generated itinerary by importing it to the user's Google Calendar OR enabling PDF download OR sending reminders via Telegram bot.
 - To develop a personal user experience with suggested places and points of interest.
+
 ## Target Audience
 All people who want to be able to manage their travel with efficiency with the use of a web application. Here, efficiency translates to be able to get suggested places for travel, generate itinerary as well as provide the itinerary to the user in an appropriate manner.
+
 ## User Stories
 1. As busy businessperson, whilst on trips, I really want to be able to plan my travel itinerary _easily on the go and accessible on a platform like Google Calendars_ rather than having to write it down and fear missing something out.
 2. As a resident in a new city, I want to be able commute to run my errands in a timely fashion with a _optimised schedule_.
-3. As an intrepid traveller, I want to be able to access my planned itineraries _by downloading it to a local device_, even when I do not have quick access to WiFi/Cellular data, instead of hunting for hotspots or free WiFi areas.
-4. I am interested in exploring the city I wish I could have a app that allows me to search for places of interest and add them to my llist within the same website without migrating back and forth between different sites.
-## Why our Itinerary Generator?
+3. I love to travel but I often forget when I'm supposed to be where. I wish I had a reminder on my phone that woud alert me according to the itinerary I have planned.
+4. As an intrepid traveller, I want to be able to access my planned itineraries _by downloading it to a local device_, even when I do not have quick access to WiFi/Cellular data, instead of hunting for hotspots or free WiFi areas.
+5. I am interested in exploring the city I wish I could have a app that allows me to search for places of interest and add them to my llist within the same website without migrating back and forth between different sites.
+
+## Why our Itinerary Generator?(Unique Selling Points)
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. We are also planning to create a Telegram Bot to remind the user as and when they have to go to the next location. This offsets our application from the others, as it integrates a more interactive and personal idea, via messaging.
+
 ## Features
 - Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
 - Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for the user (Reduces storing in flies like PDFs and gives a more on-the-go experience).
+
 ### What if I don't have a Google Account?
 - Downloadable: The app also provides the option of downloading the itinerary as a PDF.
 - Telegram Bot: An additional feature to remind the user of the events they have to attend.
+
 ## Previous Timeline
 Features to be completed by the end of June.
 - Login and logout + database configuration.
@@ -48,6 +56,7 @@ Features to be completed by the mid of July:
 - Telegram notifications.
 - Download PDF option.
 - More testing of cases.
+
 ## New Timeline
 ### Features that have been Completed
 
@@ -79,8 +88,10 @@ Our current implementation uses Google Places Autocomplete API for the user to b
 3. **_Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
 - **Need for this feature:** From our previous milestone, a common suggestion was to make the application more portable such that it may be used on a smartphone. We decided that syncing our application with a widely used app like Google Calendar would allow users to access their itinerary from the comfort of any device.
+- **A week ago,, on the 22nd of June while we were permforiming unit testing for Google Calendera we put a notification called "Egg" with a random address for the 26th. We forgot about it later but on the 26th of June we received a reminder and realised how useful a feature it was and decided to take a screen shot to link this to the user story ( Number 3 user story) above to demostrate how it can be a useful tool to keep track of a schedule.**
 
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
+
 
 4. **_Downloadable PDF_**
 There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
@@ -123,11 +134,12 @@ While this is may not be a feature, it is important that before the application 
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
 We took the feeback from Milestone 1 and decided to keep document and keep track of our features through trello.
 
-- **github**
+- **Github**
 ![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
+
 ![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(155).png)
 
-- **trello**
+- **Trello**
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(153).png)
 
 
