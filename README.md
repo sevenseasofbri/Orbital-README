@@ -1,4 +1,8 @@
+![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/itigen.png)
+
+
 # Welcome to Pyroclastic Nerds' itigen
+
 ## Team Members
 ### Leah Roselyn James and Vishruti Ranjan
 ## Proposed Level of Acheivement
