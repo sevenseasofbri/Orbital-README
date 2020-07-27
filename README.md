@@ -172,6 +172,43 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
 
 
+### User Testing
+To ensure we got feedback about our application user testing was ensured through a google form and users could test through zoom enabled control transfer depending on where they were since deployment was unsuccessful. 
+Summary: 
+
+##**Navigation and User Experience**
+100% of respondents rated the navigation experience of our app 5/5
+50% of respondents rated the aesthetics and user interface of our app 5/5
+
+
+##**Features**
+**Feature 1: Suggested Places** 
+What additional features or changes to current features would make the app more useful?
+Allow users to filter clothes by gender
+Can sort the clothes into categories (eg. dresses, skirts, etc)
+Have followers and a following
+Have a feature where users can trade for a more expensive item with 2/ more of his own clothes
+Have a function to state mailing/ courier prices for the item
+50% of respondents rated our app 5/5 in terms of user-friendliness while 37.5% rated it 4/5
+
+Overall experience
+50% of respondents rated our app 5/5 in terms of its success in achieving our aims while 37.5% rated it 4/5
+75% of respondents see themselves using our app (for those who chose no, it is because they do not enjoy wearing second-hand clothing items)
+What people liked best about our app: 
+“I like the matching feature the best! Just liking the photos and the application helps you to match potential listings!”
+The color scheme
+Not having to pay for new clothes and exchanging for clothes you like
+Very meaningful purpose towards sustainable fashion
+Easy to use
+The allowance option
+Bugs encountered:
+Other than uncompleted features, only one bug was reported where a review did not appear upon submission
+
+
+Insights:
+
+
+
 ### Agile Design Principles Used Primarily
 
 1. Dependency Injection: We have decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth bottom-up testing** of our unit tests. Although there was a single dependency in the cases where the calendar and pdf generation depend on the itinerary stored in the class.
@@ -180,7 +217,7 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 
 **As we progress and add more features we will follow  Liskov's Substitution Principle while implementing class single dependence.**
 
-### Current Testing and Security Features 
+### Current Self-Implemented Testing and Security Features 
 **1. Unit/Integration/System/Acceptance testing**
 
 - Like many programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
