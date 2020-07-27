@@ -74,13 +74,12 @@ This algorithm takes only distance into consideration. Since this is a less cons
 -**Concerns:**
 1. There is an excessive use of submit buttons for each place. Won't this hamper the UI/UX experience for the user?
 Ans: Yes, we do agree. In Milestone#3 we revamped this entire system. While we still wanted to have a single confirm button for all the values of time, we opted for a confirm button for each row. This was done keeping in mind Current Object State Bug (Discussed in Bugs and Difficulties Encountered). The end result is still a cleaner interface, rather than the excessive submit buttons.
-**[IMAGE HERE]**
+![IMAGE HERE](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(20).png)
 2. If the user inputs overlapping/non chronological times, then what will happen?
 Ans: First off, thank you for this feedback, we had completely missed this out in the last Milestone. Now we do check if the timeslots overlap when 'Add Itinerary' or 'Download PDF' is pressed and supply an error message telling users that the timings overlap. Then requires the users to re-enter values of time.
-**[IMAGE HERE]**
+![IMAGE HERE](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(18).png)
 3. Will the user be able to manually reorder the places?
 Ans: Unfortunately no, this is because of the presence of the Current Object State Bug (Discussed in Bugs and Difficulties Encountered). While this may limit the app's pontential to customise the schedule, we tried to enable flexibility by providing 2 different methods of customisation.
-**[IMAGE HERE]**
 
 **2. _Implementation of Google Maps API Key and its Functions_**
 We implemented Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). 
