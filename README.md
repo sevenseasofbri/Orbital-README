@@ -42,7 +42,7 @@ All people who want to be able to manage their travel efficiently with the use o
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. Our application provides 2-way customisation- one through the user deciding the timings of their trip and the other generating timings for the trip based on opening and closing hours.
 ## Link to frontend repo
-We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm insatll** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend0).
+We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm insatll** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend).
 ## Brief Introduction To Features 
 - 2 Way optimisation by creating a personalised and optimal itinerary based on _travel time_ OR generating a schedule based on _travel time_ AND _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
@@ -146,6 +146,11 @@ The main aim for this feature is it allows users to explore places they want to 
 
 
 ## Bugs and Difficulties Encountered
+1.**Asynchronous functions**: All of our google Places functions were asynchronous. Because it was our first time encoutnering this in a practical set up, it took us a few days to learn about the use of **"Promises"**. When we implemented it, most of our lags and bugs relating to our google functions disappeared.
+
+2.**Google ERROR 403**: To our surprise we found out in the midddle of Milestone 1 that Google may not always return a value if they get too many requests from many local hosts. Inspite of keeping within our daily request limit, there were times when ERROR 403 was returned and we had to test our product for those unlikely situations also. These errors are beyond us and we just have to accept them as trail users for Google Places API. Only paid users are guareenteed surety of response.
+
+
 
 ## Software Engineering Practices and Principles Applied 
 
@@ -180,11 +185,13 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 
 - Like many programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
 
-- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **intergartion and system testing** as it depended on the itinereary stored.
+- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **integration and system testing** as it depended on the itinereary stored.
 
+- For the Intinerary, the overapping of times and invalid times was also tested in the case that the user accidentaly inputs the wrong time an alert message pops and informs the user. Then the user enters the times again.
 
 **2. Security feature**  
 
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
+###
 
