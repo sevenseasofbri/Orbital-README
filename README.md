@@ -68,7 +68,7 @@ LOOP( i from 1 to n times){
   index <= indexOf(_value_)
 }
 ```
-Therefore, currently it takes only travel time into consideration. We plan to add the opening/closing hours constraint in the next phase for the final milestone.
+This algorithm takes only distance into consideration. Since this is a less constrained method of generating an intinerary,it gives room for users to customise 
 
 **2. _Implementation of Google Maps API Key and its Functions_**
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
@@ -105,26 +105,27 @@ This feature had already been implemented in the phase 1 of the project. This fe
 ### Features Completed in Time for Milestone#3
 
 **1. _Addition of Constraints to Itinerary Generation_**
-Accuracy plays an important factor in optimising an itinerary. While the basic generation algorithm provided a distance-based solution, the need for taking opening/closing hours of places is necessary to provide a better schedule. Another thought was that an increase in constraints largely constricts the users from customisation. Therefore, we provide users an option: either customising the itinerary ordered based on distance OR generating an itinerary optimised based on opening and closing hours.  
+Accuracy plays an important factor in optimising an itinerary. While the basic generation algorithm provided a distance-based solution, the need for taking opening/closing hours of places is necessary to provide a better schedule. Another thought was that an increase in constraints largely constricts the users from customisation. Therefore, we provide users an option: either customising the itinerary ordered based on distance OR generating an itinerary optimised based on opening and closing hours and distance. 
+The same algorithm was used to rank places according to distance. We decided to sort the places according to closing hours, giving each a priority. So a place that closes early would be given a higher rank than places that close later or are open 24 hours. A simple insertion sort was employed to sort closing hours because we are working with smaller values of N and we aim to avoid overhead recursive function calls with sorts like quicksort. 
+Now that both priority ranked lists have been obtained based on distance and opening_hours, we perform rank multiplication. That is, a multiplicative score function is used to determine the rank of the place in the final list. This is chosen over a additive score function because we can obtain a more accurate relative rank for each place rather than a more absolute one. 
+Once the places have been ranked, the user enters the time they want to spend at each place and start time of their trip. Following this, the timings are calculated without the user having to enter each timing.
   - **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
   - **Links to User Story 2**
-- **Concerns:** The previous Milestone's feedback voiced an apt concern: Some places do not have opening/ closing hours? How are we going to account for that? Keeping that in mind we 
+- **Concerns:** The previous Milestone's feedback voiced an apt concern: Some places do not have opening/ closing hours? How are we going to account for that? Keeping that in mind we did a little bit of research and here's what we found:
+We obtain the details of the places using Google Places API. A place request is initiated with the place id. This Place Details request returns more comprehensive information about the indicated place such as its complete address, opening_hours, phone number, user rating and reviews. Based on this, we found that there are 2 instances where one can say that a place does not have opening/closing hours:
+1. When the request returns a NULL/ undefined value under opening_hours then this means the result was not received quick enough OR theres a Google 403 forbidden error, which occurs when the server is receiving too many request and refuses to connect. Alternatively, Google PlacesAutoComplete occasionally lags and returns a null place_id, without which we many not be able to send a request. Taking these issues into consideration, it was decided that in the event any of this occurs, the application  ignores the place altogether/ removes it from the list. (More about Google Request Lag in Problems Faced)
+2. When a place is open 24/7 like parks, hospitals, cinema halls etc. A place_id request for place_details returns a result. This result has an object called opening_hours. Under opening hours we have an array periods[] describing HHMM values called day, open and close. In the case that the place is open 24/7, the values for day=0, open=0000 and close = undefined. So we have a check for this and all 24 hour places are "lower priority" under the visiting schedule.
 
 **2. _Complete UI/UX of the Website_**
-Our current method of input is quite cumbersome for the user to enter values. We plan to fix this by the next milestone and provide a pleasant UI/UX experience for our users!
+Not a feature, but an important part of our project that was completely revamped since last time. We tried to make everything as user friendly as possible to privde an all-round user experience. 
   - **Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
-
-**3. _Telegram Notifications_**
-We plan to create a telegram bot linked to this application which will remind the user of the events they have scheduled using the application, notification will be sent they are supposed to start spending time in that places and a notification will be send when they are supposed to leave. These timings will be inputted by the user itself according to his preferences. Can be seen in the video 
-  - **Need for this feature:** The integration of our Web App with Google Calendar came with its own set of drawbacks. This would mean people who do not have Google Accounts will not be able to view/store thier itinerary in an effective manner (like, on their phones). As creators, we cannot favour a certain population of users and must aim to take everyone into account. Telegram is a widely used application for messaging and bots alike, therefore we decided that it was necessary we include this feature.
-  - **Links to User Story 3**
   
-**4. _HomePage with Suggested Places_**
-We plan to add suggested places on the home page for the user either based on previous searches, repeated locations or current location of the user. These places of interests will show up as tiny boxes to choose or click on to find more information. This will act as the homepage when the user first does a login. The user can either input a location around which he/she wants to visit places or interest or if nothing is inputted then the places of interest are based on the users current location and previous itinerary.
+**3. _HomePage with Suggested Places_**
+The main aim for this feature is it allows users to explore places they want to vist and even get visual data like pictures of these places. This feature has been implemented using Cards in Material UI. A card contains information and actions related to a single topic. We display cards based on places 
   - **Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
   - **Links to User Story 5**
   
-**5. _TESTING_**
+**4. _TESTING_**
 While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
 
 
