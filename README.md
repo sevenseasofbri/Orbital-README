@@ -165,8 +165,6 @@ Summary:
 - Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
             Navabar colour can be better. Currently dull.
 
-### **Features**
-
 ### **Feature 1: Suggested Places** 
 - 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
@@ -210,6 +208,30 @@ Summary:
   - Welcoming text glitching
   - Overlapping places still get added.
 
+## Current Self-Implemented Testing and Security Features 
+
+
+**1. Alerts for Invalid Cases:** We received a lot of valid feedback regarding alerts of invalid cases. It was one of our most important priorites to include this both as a security feature and as an information feature.
+
+- For the Intinerary, the overapping of times and invalid times was also tested in the case that the user accidentaly inputs the wrong time an alert message pops and informs the user of the following and the calender and pdf are not generated. Then the user enters the times again.
+
+- For the login page, incorrect username and password are alerted to the user and a redirection to registration is provided through a link.
+
+**2. Unit/Integration/System/Acceptance testing**
+
+- During Milestone 3, we did a lot more testing as we found the the limitations of Google Places API. **There were times where the google would'nt even return a value and instead give "QUERY OVER LIMIT" and "ERROR 403". These errors are not due to a mistake or wrong implemtation on our part but due to Google receiving too many requests from users around the world at the same time which causes the request limit to exceed their rate limit.**
+
+- If you do clone the repo there may be times when the card load appropiately with learn more websites but without the photo.**If you look at the console you will find ERROR 403 in red as a warning. This is an error 403 from Google refusing our server call at that moment due to over requests.** 
+
+- For the generator we had to do a lot of special case testing where opening and closing hours were not mentioned.**It took over a week and 40 unit tests for us to get Generator and it's algorithms to start fuctioning appropriately.**
+
+- We had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
+
+- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **integration and system testing** as it depended on the itinereary stored.
+
+**3. Security feature**  
+
+- For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
          
 ## Program Flow and Design 
 
@@ -237,16 +259,4 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 2. Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js, and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
 
 
-## Current Self-Implemented Testing and Security Features 
-**1. Unit/Integration/System/Acceptance testing**
-
-- Like many programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
-
-- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **integration and system testing** as it depended on the itinereary stored.
-
-- For the Intinerary, the overapping of times and invalid times was also tested in the case that the user accidentaly inputs the wrong time an alert message pops and informs the user. Then the user enters the times again.
-
-**2. Security feature**  
-
-- For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
