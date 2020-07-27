@@ -77,7 +77,7 @@ Our current implementation uses Google Places Autocomplete API for the user to b
  - **Links to User Story 1**
  
  
-![Delete Feature](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(305).png)
+![Delete Feature](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(168).png)
 
 **3. _Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
@@ -100,7 +100,7 @@ There will be an option to allow the user to download the created itinerary loca
 This feature had already been implemented in the phase 1 of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
 - **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
-![Invalid User alert and redirection](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(309).png)
+![Invalid User alert and redirection](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(167).png)
 
 ### Features Completed in Time for Milestone#3
 
@@ -146,7 +146,7 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 ![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(155).png)
 
 - **Trello**
-![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(153).png)
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
 
 
 ### Agile Design Principles Used Primarily
