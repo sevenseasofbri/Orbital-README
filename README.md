@@ -16,7 +16,7 @@ In addtion to this, our application uses the following API:
 ## What has changed since Milestone #2?
 Based off the constructive feedback, the purpose of our application seemed to be fitting for the intended audience. So, we decided to continue in the same trajectory as planned. However, we did not realise that some things we planned to do were a bit of a stretch as they had a completely new tech stack to learn. In retrospect, we should have put a little thought into the complexity of implementation rather than the idea itself. Alas! We had to forgo the feature of the Telegram Bot for reminders.
 Sadness aside, we did focus a lot more on the user interface and experience as well as the optimisation algorithm for the itinerary. This made our application visually pleasing and easy to use!
-### Our Updated Poster with New Features
+### Our Updated Poster with Modified Features
 ![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/poster.png)
 
 ## Motivation
@@ -42,7 +42,7 @@ All people who want to be able to manage their travel efficiently with the use o
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. Our application provides 2-way customisation- one through the user deciding the timings of their trip and the other generating timings for the trip based on opening and closing hours.
 ## Brief Introduction To Features 
-- Creates a personalised and optimal itinerary based on: _travel time_ and _opening/closing hours_.
+- 2 Way optimisation by creating a personalised and optimal itinerary based on _travel time_ OR generating a schedule based on _travel time_ AND _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
 - Integration with Google Calendar: The itinerary can be accessed on any device that uses Google and provides a familiar UI/UX experience for the user (Reduces storing in files like PDFs and gives a more on-the-go experience).
 
@@ -68,7 +68,9 @@ LOOP( i from 1 to n times){
   index <= indexOf(_value_)
 }
 ```
-This algorithm takes only distance into consideration. Since this is a less constrained method of generating an intinerary,it gives room for users to customise 
+This algorithm takes only distance into consideration. Since this is a less constrained method of generating an itinerary,it gives room for users to customise. So we give users a choise as to whether they want to optimise by distance only or both distance and opening hours. 
+-**Concerns:**
+1. There is an excessive use of submit buttons for each place
 
 **2. _Implementation of Google Maps API Key and its Functions_**
 Our current implementation uses Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). Apart from this, we will be able to retrieve information like opening/closing hours as a constraint to implement in the next phase.
@@ -128,9 +130,9 @@ The main aim for this feature is it allows users to explore places they want to 
 **4. _TESTING_**
 While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
 
+## Bugs and Difficulties Encountered
 
-## Software Engineering Practices and Principles Applied :
-
+## Software Engineering Practices and Principles Applied 
 
 ### Program Flow and Design 
 
@@ -171,10 +173,3 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
 
-# Draft Plan for Milestone 3 
-
-**Rough idea of how we will start the approach for Milestone 3 in steps**
-1. Save the previous itinerary in the Database to suggest places of interest to  the user the next time they log in.
-2. Start imporvement of UI/UX of the page. Literature review of Telegram API.
-3. Implement telegram bot.
-4. Optimise itinerary with opening/closing hours.
