@@ -152,14 +152,14 @@ The main aim for this feature is it allows users to explore places they want to 
 
 
 
-## Software Engineering Practices and Principles Applied 
+# Software Engineering Practices and Principles Applied 
 
-### Program Flow and Design 
+## Program Flow and Design 
 
 1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
 
-### Project Management and Programming Practices
+## Project Management and Programming Practices
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
 We took the feedback from Milestone 1 and decided to ensure documentation and keep track of our features through trello and a more detailed README.
 
@@ -172,52 +172,69 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
 
 
-### User Testing
+## User Testing
 To ensure we got feedback about our application user testing was ensured through a google form and users could test through zoom enabled control transfer depending on where they were since deployment was unsuccessful. 
 Summary: 
 
-##**Navigation and User Experience**
-100% of respondents rated the navigation experience of our app 5/5
-50% of respondents rated the aesthetics and user interface of our app 5/5
+## *Navigation and User Experience**
 
+1. 100% of respondents rated the navigation experience of our app 5/5
+2. 50% of respondents rated the aesthetics and user interface of our app 5/5
+- Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
+            Navabar colour can be better. Currently dull.
 
-##**Features**
-**Feature 1: Suggested Places** 
-What additional features or changes to current features would make the app more useful?
-Allow users to filter clothes by gender
-Can sort the clothes into categories (eg. dresses, skirts, etc)
-Have followers and a following
-Have a feature where users can trade for a more expensive item with 2/ more of his own clothes
-Have a function to state mailing/ courier prices for the item
-50% of respondents rated our app 5/5 in terms of user-friendliness while 37.5% rated it 4/5
+## **Features**
+### **Feature 1: Suggested Places** 
+- 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
+- 100 % of users said this was an easy to use feature.
+- Bugs faced: Mexico was not returning results.
+              The Welcome text was glitching as the places were loading.
+- Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
+            
+### **Feature 2: Customise Itinerary** 
+- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 100 % of users said this was an easy to use feature.
+- Bugs faced: Sometimes places return blank on the table
+- Feedback: Useful feature for keeping track of time and saves the pain of checking opening closing hours ourself.
 
-Overall experience
-50% of respondents rated our app 5/5 in terms of its success in achieving our aims while 37.5% rated it 4/5
-75% of respondents see themselves using our app (for those who chose no, it is because they do not enjoy wearing second-hand clothing items)
-What people liked best about our app: 
-“I like the matching feature the best! Just liking the photos and the application helps you to match potential listings!”
-The color scheme
-Not having to pay for new clothes and exchanging for clothes you like
-Very meaningful purpose towards sustainable fashion
-Easy to use
-The allowance option
-Bugs encountered:
-Other than uncompleted features, only one bug was reported where a review did not appear upon submission
+### **Feature 3: Generate Itinerary** 
+- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 100 % of users said this was an easy to use feature.
+- Bugs faced: None
+- Feedback: Formatted address returned is not very userfriendly. Needs an easier address format.
 
+### **Feature 4: Add to Google Calendar** 
+- 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
+- 100 % of users said this was an easy to use feature.
+- Bugs faced: Calendar function added same event multiple times
+              Overlapping places still get added.
+- Feedback: A genuinely good feature for quicker storage of itinerary.
 
-Insights:
+### **Feature 5: Download PDF** 
+- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 100 % of users said this was an easy to use feature.
+- Bugs faced: None
+- Feedback: Storage of Generator places names can be more friendly.
 
+### **Insights**
+**1. Experience**
+  - User testing enabled us to realise a lot of things we see as normal are actually bugs to users.This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3.
+  
+  
+**2. Bugs Fixed:**
+  - Calender function adding same events multiple times
+  - Welcoming text glitching
+  - Overlapping places still get added.
 
-
-### Agile Design Principles Used Primarily
+                  
+## Agile Design Principles Used Primarily
 
 1. Dependency Injection: We have decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth bottom-up testing** of our unit tests. Although there was a single dependency in the cases where the calendar and pdf generation depend on the itinerary stored in the class.
 
 2. Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js, and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
 
-**As we progress and add more features we will follow  Liskov's Substitution Principle while implementing class single dependence.**
 
-### Current Self-Implemented Testing and Security Features 
+## Current Self-Implemented Testing and Security Features 
 **1. Unit/Integration/System/Acceptance testing**
 
 - Like many programs, ours had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
@@ -229,6 +246,4 @@ Insights:
 **2. Security feature**  
 
 - For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
-
-###
 
