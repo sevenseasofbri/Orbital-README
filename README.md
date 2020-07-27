@@ -41,6 +41,8 @@ All people who want to be able to manage their travel efficiently with the use o
 ## Why our Itinerary Generator?(Unique Selling Points)
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. Our application provides 2-way customisation- one through the user deciding the timings of their trip and the other generating timings for the trip based on opening and closing hours.
+## Link to frontend repo
+We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm insatll** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend0).
 ## Brief Introduction To Features 
 - 2 Way optimisation by creating a personalised and optimal itinerary based on _travel time_ OR generating a schedule based on _travel time_ AND _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
@@ -50,7 +52,7 @@ All people who want to be able to manage their travel efficiently with the use o
 - Downloadable: The app also provides the option of downloading the itinerary as a PDF.
 
 ## Overall Timeline With Features
-### Features Completed in Milestone#2
+### Features Completed in Milestone#2 + Modifications for Milestone#3
 **1. _Basic Algorithm for Itinerary Generation_**
  Due to time constraint (aka Special Term for both of us) we decided to implement Dijkstra's algorithm for optimising the itinerary. 
   - **Need for this Feature:** An important part of this web application is to be able to produce an ideal itinerary for a user. Therefore, it is imperative to have a basic algorithm for itinerary generation.
@@ -82,13 +84,13 @@ Ans: Unfortunately no, this is because of the presence of the Current Object Sta
 
 **2. _Implementation of Google Maps API Key and its Functions_**
 We implemented Google Places Autocomplete API for the user to be able to enter places they want to visit. The results from this are stored in an array of places, from which information of latitudes/longitudes are used for geocoding with NPM package - [geolib](https://www.npmjs.com/package/geolib). 
-
+Furthermore, we implemented [Google Maps Places API](https://developers.google.com/places/web-service/details) to obtain place details and thereby optimise the itinerary based on opening and closing hours. A more detailed look into this is in the section "Features completed in time for Milestone#3."
  - **Additional feature:** Delete location is the user has a change of mind after adding the location to the itinerary in th eplanning stages.
  - **Need for these features:** Provides an interactive platform for users to enter names of places with suggestions. Moreover, all the APIs are important on the backend side of things as information procured from them aids in itinerary generation.
  - **Links to User Story 1**
  
- 
 ![Delete Feature](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(168).png)
+**[IMAGE HERE]**
 
 **3. _Implementing Google Calendar_**
 This allows the user to import the generated itinerary to the Google Calendar which is accessible both as an app and as a website. We use the [Google Calendar API](https://developers.google.com/calendar) which implements safe login to the users account using [OAuth2](https://developers.google.com/identity/protocols/oauth2) and allows the Itinerary Generator to create an event in your Google calendar.
@@ -99,6 +101,8 @@ This allows the user to import the generated itinerary to the Google Calendar wh
  
 ![Reminder](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/photo6328029699976047138.jpg)
 
+- **Concerns:** For adding the itinerary to the Google Calendar, the user has to sign in repeatedly. Won't this be cumbersome?
+Ans: In the video for Milestone#2, we did everything in a Guest Browser. This required us to sign in to our Google Account. However, the in a regular browser, OAuth does not require the user to sign in again. An example of this will be in the video.
 
 **4. _Downloadable PDF_**
 There will be an option to allow the user to download the created itinerary locally onto their devices in PDF format. 
@@ -109,6 +113,7 @@ There will be an option to allow the user to download the created itinerary loca
 
 **5. _Login/Logout_** (**Security feature**)
 This feature had already been implemented in the phase 1 of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
+All passwords are encrypted and the database server uses TCP/IP abstraction layers for routing and switching. 
 - **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
 
 ![Invalid User alert and redirection](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(167).png)
@@ -122,6 +127,7 @@ Now that both priority ranked lists have been obtained based on distance and ope
 Once the places have been ranked, the user enters the time they want to spend at each place and start time of their trip. Following this, the timings are calculated without the user having to enter each timing.
   - **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
   - **Links to User Story 2**
+  **[IMAGE]**
 - **Concerns:** The previous Milestone's feedback voiced an apt concern: Some places do not have opening/ closing hours? How are we going to account for that? Keeping that in mind we did a little bit of research and here's what we found:
 We obtain the details of the places using Google Places API. A place request is initiated with the place id. This Place Details request returns more comprehensive information about the indicated place such as its complete address, opening_hours, phone number, user rating and reviews. Based on this, we found that there are 2 instances where one can say that a place does not have opening/closing hours:
 1. When the request returns a NULL/ undefined value under opening_hours then this means the result was not received quick enough OR theres a Google 403 forbidden error, which occurs when the server is receiving too many request and refuses to connect. Alternatively, Google PlacesAutoComplete occasionally lags and returns a null place_id, without which we many not be able to send a request. Taking these issues into consideration, it was decided that in the event any of this occurs, the application  ignores the place altogether/ removes it from the list. (More about Google Request Lag in Problems Faced)
@@ -129,7 +135,7 @@ We obtain the details of the places using Google Places API. A place request is 
 
 **2. _Complete UI/UX of the Website_**
 Not a feature, but an important part of our project that was completely revamped since last time. We tried to make everything as user friendly as possible to privde an all-round user experience. 
-  - **Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We intend to redesign some parts of the website to make it user friendly especially the itinerary section.
+  - **Need for this to be Implemented:** It is imperative for a good website to provide its users an enjoyable experience while using it. We redesigned some parts of the and made it user friendly especially the customise and generate section.
   
 **3. _HomePage with Suggested Places_**
 The main aim for this feature is it allows users to explore places they want to vist and even get visual data like pictures of these places. This feature has been implemented using Cards in Material UI. A card contains information and actions related to a single topic. We display cards based on places 
@@ -137,7 +143,7 @@ The main aim for this feature is it allows users to explore places they want to 
   - **Links to User Story 5**
   
 **4. _TESTING_**
-While this is may not be a feature, it is important that before the application goes into deployment, although we have done quite a bit of testing, more extensive (automated) testing of cases has to be done for Milestonee 3 which will see more integration of our features. This will help us clear out any bugs, hiccups and loose ends in our codes and remove them in time for the future.
+
 
 ## Bugs and Difficulties Encountered
 
