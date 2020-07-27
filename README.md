@@ -142,24 +142,50 @@ The main aim for this feature is it allows users to explore places they want to 
   - **Need for this feature:** This will make the homepage rather visually pleasing and will create a personalised experience for them.
   - **Links to User Story 5**
   
-**4. _TESTING_**
 
+# Testing 
 
 ## Bugs and Difficulties Encountered
+
 1.**Asynchronous functions**: All of our google Places functions were asynchronous. Because it was our first time encoutnering this in a practical set up, it took us a few days to learn about the use of **"Promises"**. When we implemented it, most of our lags and bugs relating to our google functions disappeared.
 
 2.**Google ERROR 403**: To our surprise we found out in the midddle of Milestone 1 that Google may not always return a value if they get too many requests from many local hosts. Inspite of keeping within our daily request limit, there were times when ERROR 403 was returned and we had to test our product for those unlikely situations also. These errors are beyond us and we just have to accept them as trail users for Google Places API. Only paid users are guareenteed surety of response.
 
+## Current Self-Implemented Testing and Security Features 
+
+**1. Alerts for Invalid Cases:** We received a lot of valid feedback regarding alerts of invalid cases. It was one of our most important priorites to include this both as a security feature and as an information feature. 
+
+- If you do clone the repo there may be times when the card load appropiately with learn more websites but without the photo.**If you look at the console you will find ERROR 403 in red as a warning. This is an error 403 from Google refusing our server call at that moment due to over requests.** 
+
+**These features are displayed in the video :**
+
+- For the Intinerary and Generator , the overapping of times and invalid times was also tested in the case that the user accidentaly inputs the wrong time an alert message pops and informs the user of the following and the calender and pdf are not generated. Then the user enters the times again.
+
+- For the login page, incorrect username and password are alerted to the user and a redirection to registration is provided through a link.
+
+**2. Unit/Integration/System/Acceptance testing**
+
+- During Milestone 3, we did a lot more testing as we found the the limitations of Google Places API. **There were times where the google would'nt even return a value and instead give "QUERY OVER LIMIT" and "ERROR 403". These errors are not due to a mistake or wrong implemtation on our part but due to Google receiving too many requests from users around the world at the same time which causes the request limit to exceed their rate limit.**
+
+- For the generator we had to do a lot of special case testing where opening and closing hours were not mentioned.**It took over a week and 40 unit tests for us to get Generator and it's algorithms to start fuctioning appropriately.** Whereas for Suggested Places, **it also took over a week of continuous manual unit testing to fix the asynchronity problems we faced it with "Promises" and callbacks. This was followed by 20 rounds of integration testing with Material-UI CARDS componenent, which is where we encountered ERROR 403 with respect to the image. During acceptance testing we added additional easy to implement features like adding ratings and linking the website to "Learn more" on the cards.** 
+
+- We had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
+
+- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **integration and system testing** as it depended on the itinereary stored.
+
+**3. Security feature**  
+
+- For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
 
 
 # Software Engineering Practices and Principles Applied 
+
 
 ## User Testing
 To ensure we got feedback about our application user testing was ensured through a google form and users could test through zoom enabled control transfer depending on where they were since deployment was unsuccessful. 
 Summary: 
 
 ### **Navigation and User Experience**
-
 1. 100% of respondents rated the navigation experience of our app 5/5
 2. 50% of respondents rated the aesthetics and user interface of our app 5/5
 - Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
@@ -197,42 +223,16 @@ Summary:
 - Bugs faced: None
 - Feedback: Storage of Generator places names can be more friendly.
 
-### **Insights**
+### **Insights on User Testing and it's importance**
 
 **1. Experience**
-  - User testing enabled us to realise a lot of things we see as normal are actually bugs to users.This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3.
+  - **User testing enabled us to realise a lot of things we see as normal are actually bugs to users**. This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3. A very clear opinion was a better formatted address name for inputted Places.
   
-  
-**2. Bugs Fixed:**
+**2. Bugs Fixed:** These are the bugs we were able to fix in time.
   - Calender function adding same events multiple times
   - Welcoming text glitching
-  - Overlapping places still get added.
-
-## Current Self-Implemented Testing and Security Features 
-
-
-**1. Alerts for Invalid Cases:** We received a lot of valid feedback regarding alerts of invalid cases. It was one of our most important priorites to include this both as a security feature and as an information feature.
-
-- For the Intinerary, the overapping of times and invalid times was also tested in the case that the user accidentaly inputs the wrong time an alert message pops and informs the user of the following and the calender and pdf are not generated. Then the user enters the times again.
-
-- For the login page, incorrect username and password are alerted to the user and a redirection to registration is provided through a link.
-
-**2. Unit/Integration/System/Acceptance testing**
-
-- During Milestone 3, we did a lot more testing as we found the the limitations of Google Places API. **There were times where the google would'nt even return a value and instead give "QUERY OVER LIMIT" and "ERROR 403". These errors are not due to a mistake or wrong implemtation on our part but due to Google receiving too many requests from users around the world at the same time which causes the request limit to exceed their rate limit.**
-
-- If you do clone the repo there may be times when the card load appropiately with learn more websites but without the photo.**If you look at the console you will find ERROR 403 in red as a warning. This is an error 403 from Google refusing our server call at that moment due to over requests.** 
-
-- For the generator we had to do a lot of special case testing where opening and closing hours were not mentioned.**It took over a week and 40 unit tests for us to get Generator and it's algorithms to start fuctioning appropriately.**
-
-- We had bugs like delayed responses in autocomplete and the coordinate searching. We were able to fix those bugs through tracking via **console.log()** and performed at least **30 different unit location testing** to ensure that our algorithm was working as it was supposed to. This was followed by **integration testing**  with other features like calendar and download PDF and a additional **15 rounds of manual acceptance tesing** before we recorded our video. **Typically system testing was performed everyday atleast 10 times in the last week owing to most of the features we implemented this week.**
-
-- Our Calendar features also had unknown bugs to begin with like the **feature of reccurrence** that we had to disable. We tested the ability of it to **set reminders and we were able to receive those notifications** on our mobile Phones. This was resolved again with **integration and system testing** as it depended on the itinereary stored.
-
-**3. Security feature**  
-
-- For our Login page, if the backend detects that the **user is not registered an incorrect input alert and redirects back to the Registration page**. This feature can be seen in the video. We also used **jwt auth to ensure that user information is kept private through encoding and decoding during Login/Registration**.
-         
+  - Overlapping places still get added to the Calender.
+  
 ## Program Flow and Design 
 
 1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
@@ -249,7 +249,6 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 
 - **Trello**
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
-
 
          
 ## Agile Design Principles Used Primarily
