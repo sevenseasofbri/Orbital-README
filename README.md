@@ -127,7 +127,7 @@ Now that both priority ranked lists have been obtained based on distance and ope
 Once the places have been ranked, the user enters the time they want to spend at each place and start time of their trip. Following this, the timings are calculated without the user having to enter each timing.
   - **Need for this feature:** To improve quality of itinerary created and make it more accurate and usable as possible.
   - **Links to User Story 2**
-  **[IMAGE]**
+![gif](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/advalgo.gif)
 - **Concerns:** The previous Milestone's feedback voiced an apt concern: Some places do not have opening/ closing hours? How are we going to account for that? Keeping that in mind we did a little bit of research and here's what we found:
 We obtain the details of the places using Google Places API. A place request is initiated with the place id. This Place Details request returns more comprehensive information about the indicated place such as its complete address, opening_hours, phone number, user rating and reviews. Based on this, we found that there are 2 instances where one can say that a place does not have opening/closing hours:
 1. When the request returns a NULL/ undefined value under opening_hours then this means the result was not received quick enough OR theres a Google 403 forbidden error, which occurs when the server is receiving too many request and refuses to connect. Alternatively, Google PlacesAutoComplete occasionally lags and returns a null place_id, without which we many not be able to send a request. Taking these issues into consideration, it was decided that in the event any of this occurs, the application  ignores the place altogether/ removes it from the list. (More about Google Request Lag in Problems Faced)
@@ -236,7 +236,7 @@ Summary:
 ## Program Flow and Design 
 
 1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
-![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/ProgramFlowNEw.png)
 
 ## Project Management and Programming Practices
 We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
