@@ -41,8 +41,10 @@ All people who want to be able to manage their travel efficiently with the use o
 ## Why our Itinerary Generator?(Unique Selling Points)
 1. Unlike popular websites like [Itineree](http://itineree.com/) and [Tripomatic](https://maps.sygic.com/?utm_source=content-pages&utm_medium=cta&utm_campaign=homepage#/?map=12,1.32568,103.846519) which require the user to install their mobile apps to sync their own implemented calendars; our application allows the user to sync their itinerary to their Google Calendar (more widely present on people's mobile phones, and user friendly).
 2. Our application provides 2-way customisation- one through the user deciding the timings of their trip and the other generating timings for the trip based on opening and closing hours.
+
 ## Link to frontend repo
-We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm insatll** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend).
+We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm install** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend).
+
 ## Brief Introduction To Features 
 - 2 Way optimisation by creating a personalised and optimal itinerary based on _travel time_ OR generating a schedule based on _travel time_ AND _opening/closing hours_.
 - Suggests places to travel to based on user inputs.
@@ -113,7 +115,7 @@ There will be an option to allow the user to download the created itinerary loca
 **5. _Login/Logout_** (**Security feature**)
 This feature had already been implemented in the phase 1 of the project. This feature is required to store user information and places preference data to help give good suggestions on the home-page (read: Point 5, Features to be Completed).
 All passwords are encrypted and the database server uses TCP/IP abstraction layers for routing and switching. 
-- **Testing:** Incorrect inputs during login prompts an incorrect input alert and redirects back to the Registration page. 
+- **Testing:** Incorrect inputs during login prompts an incorrect input alert.
 
 ![Invalid User alert and redirection](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(167).png)
 
@@ -178,7 +180,6 @@ The main aim for this feature is it allows users to explore places they want to 
 
 
 # Software Engineering Practices and Principles Applied 
-
 
 ## User Testing
 To ensure we got feedback about our application user testing was ensured through a google form and users could test through zoom enabled control transfer depending on where they were since deployment was unsuccessful. 
