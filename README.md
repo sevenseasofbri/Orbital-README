@@ -13,11 +13,13 @@ This project is fuelled by [ReactJS](https://reactjs.org/), [ExpressJS (NodeJS)]
 In addtion to this, our application uses the following API:
 - [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/overview): To provide accurate details of distances between places, place details and to autocomplete places searched by the user.
 - [Material UI](https://material-ui.com/): To create a clean and user-friendly environment in the application. Provides react components fro easier and effective web development.
+
 ## What has changed since Milestone #2?
 Based off the constructive feedback, the purpose of our application seemed to be fitting for the intended audience. So, we decided to continue in the same trajectory as planned. However, we did not realise that some things we planned to do were a bit of a stretch as they had a completely new tech stack to learn. In retrospect, we should have put a little thought into the complexity of implementation rather than the idea itself. Alas! We had to forgo the feature of the Telegram Bot for reminders.
 Sadness aside, we did focus a lot more on the user interface and experience as well as the optimisation algorithm for the itinerary. This made our application visually pleasing and easy to use!
+
 ### Our Updated Poster with Modified Features
-![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/poster.png)
+![Poster](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/New%20Poster.png)
 
 ## Motivation
 As two international students in Singapore, we realised the difficulty of planning schedules with limited knowledge of places of interest in Singapore. To ease this process of travelling, we were highly motivated to create an _Itinerary Planning Web Application_ that would help travellers plan their journey **anywhere in the world** in a personalised and effective manner.
@@ -44,6 +46,8 @@ All people who want to be able to manage their travel efficiently with the use o
 
 ## Link to frontend repo
 We ran into some issues during deployment, while we have our full repository with backend and frontend available (linked in Programming Practices section) we thought it would be easier for people to try out the application without having to create a table in MySQL and running Apache to set up login/logout. So we decided to provide a version of the application that can simply be updated with **npm install** and then run with **npm start** to try out the frontend features.[Click here] (https://github.com/rosejtec/itigen_frontend).
+
+## Official Github (with frontend and backend) : ![repo](https://github.com/rosejtec/Orbital_New)
 
 ## Brief Introduction To Features 
 - 2 Way optimisation by creating a personalised and optimal itinerary based on _travel time_ OR generating a schedule based on _travel time_ AND _opening/closing hours_.
@@ -233,15 +237,17 @@ Summary:
   - Calender function adding same events multiple times
   - Welcoming text glitching
   - Overlapping places still get added to the Calender.
-  
+ 
+
+# BUG FIXED: No need to refersh page after error alert(like shown in the video). Now you can simply enter the in and out time again with the same stored places after the error alert.
+
 ## Program Flow and Design 
 
 1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
 ![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/ProgramFlowNEw.png)
 
 ## Project Management and Programming Practices
-We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
-We took the feedback from Milestone 1 and decided to ensure documentation and keep track of our features through trello and a more detailed README.
+We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. And trello for project management.
 
 - **Github**
 ![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
