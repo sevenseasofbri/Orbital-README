@@ -154,36 +154,19 @@ The main aim for this feature is it allows users to explore places they want to 
 
 # Software Engineering Practices and Principles Applied 
 
-## Program Flow and Design 
-
-1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
-![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
-
-## Project Management and Programming Practices
-We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
-We took the feedback from Milestone 1 and decided to ensure documentation and keep track of our features through trello and a more detailed README.
-
-- **Github**
-![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
-
-![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(155).png)
-
-- **Trello**
-![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
-
-
 ## User Testing
 To ensure we got feedback about our application user testing was ensured through a google form and users could test through zoom enabled control transfer depending on where they were since deployment was unsuccessful. 
 Summary: 
 
-## *Navigation and User Experience**
+### **Navigation and User Experience**
 
 1. 100% of respondents rated the navigation experience of our app 5/5
 2. 50% of respondents rated the aesthetics and user interface of our app 5/5
 - Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
             Navabar colour can be better. Currently dull.
 
-## **Features**
+### **Features**
+
 ### **Feature 1: Suggested Places** 
 - 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
@@ -217,6 +200,7 @@ Summary:
 - Feedback: Storage of Generator places names can be more friendly.
 
 ### **Insights**
+
 **1. Experience**
   - User testing enabled us to realise a lot of things we see as normal are actually bugs to users.This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3.
   
@@ -226,7 +210,26 @@ Summary:
   - Welcoming text glitching
   - Overlapping places still get added.
 
-                  
+         
+## Program Flow and Design 
+
+1. This is a detailed Program Flow of our app currently. Looking at this should five any first time user a good idea of what our web application does.
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/OrbitalMilestone2.png)
+
+## Project Management and Programming Practices
+We have used GitHub to handle our project with efficiency, by the next milestone we will be able to make our repository public. **Right now, we have sensitive information like API keys whose usage directly translates to our billing amount on Google Cloud (^_^").**
+We took the feedback from Milestone 1 and decided to ensure documentation and keep track of our features through trello and a more detailed README.
+
+- **Github**
+![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(154).png)
+
+![github](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(155).png)
+
+- **Trello**
+![trello](https://github.com/sevenseasofbri/Orbital-README/blob/master/Images/Screenshot%20(164).png)
+
+
+         
 ## Agile Design Principles Used Primarily
 
 1. Dependency Injection: We have decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth bottom-up testing** of our unit tests. Although there was a single dependency in the cases where the calendar and pdf generation depend on the itinerary stored in the class.
