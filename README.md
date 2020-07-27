@@ -186,49 +186,50 @@ To ensure we got feedback about our application user testing was ensured through
 Summary: 
 
 ### **Navigation and User Experience**
-1. 100% of respondents rated the navigation experience of our app 5/5
-2. 50% of respondents rated the aesthetics and user interface of our app 5/5
+1. 100% of respondents rated the navigation experience of our app.
+2. 87.5% of respondents rated the aesthetics and user interface of our app.
 - Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
             Navabar colour can be better. Currently dull.
 
 ### **Feature 1: Suggested Places** 
-- 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
+- 71.4% of respondents rated our app 4/5 with regards to how likely they were to use this feature.
 - 100 % of users said this was an easy to use feature.
 - Bugs faced: Mexico was not returning results.
               The Welcome text was glitching as the places were loading.
 - Feedback: Would be nice if the cards had a add button to them to export to CUSTOMIZE and GENERATOR.
             
 ### **Feature 2: Customise Itinerary** 
-- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 57.1 % and 42.9 % of respondents rated our app 4/5 and 5/5 respectively with regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
 - Bugs faced: Sometimes places return blank on the table
 - Feedback: Useful feature for keeping track of time and saves the pain of checking opening closing hours ourself.
 
 ### **Feature 3: Generate Itinerary** 
-- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 71.4 % and 28.6 % of respondents rated our app 4/5 and 5/5 respectively with regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
 - Bugs faced: None
 - Feedback: Formatted address returned is not very userfriendly. Needs an easier address format.
 
 ### **Feature 4: Add to Google Calendar** 
-- 100% of respondents rated our app 4/5 with regards to how likely they were to use this feature
+- 57.1 % and 42.9 % of respondents rated our app 4/5 and 5/5 respectively with regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
 - Bugs faced: Calendar function added same event multiple times
               Overlapping places still get added.
 - Feedback: A genuinely good feature for quicker storage of itinerary.
 
 ### **Feature 5: Download PDF** 
-- 100% of respondents rated our app 5/5 with regards to how likely they were to use this feature
+- 57.1%  and 42.9 % of respondents rated our app 4/5 and 5/5 respectivelywith regards to how likely they were to use this feature
 - 100 % of users said this was an easy to use feature.
 - Bugs faced: None
 - Feedback: Storage of Generator places names can be more friendly.
 
 ### **Insights on User Testing and it's importance**
 
-**1. Experience**
-  - **User testing enabled us to realise a lot of things we see as normal are actually bugs to users**. This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3. A very clear opinion was a better formatted address name for inputted Places.
+**1. General Feedback:** Alerts can be more customizable to the error. Users should be able to choose the number of reminders they want in the Calender. Both Generator and Itinerary should be under the same page and be presented as a choice rather than as seperate entities. 
   
-**2. Bugs Fixed:** These are the bugs we were able to fix in time.
+**2. User testing enabled us to realise a lot of things we see as normal are actually bugs to users**. This excercise was helpful in actually cutting down on some buggy features before the end of Milestone 3. A very clear opinion was a better formatted address name for inputted Places.
+  
+**3. Bugs Fixed:** These are the bugs we were able to fix in time.
   - Calender function adding same events multiple times
   - Welcoming text glitching
   - Overlapping places still get added to the Calender.
@@ -256,6 +257,3 @@ We took the feedback from Milestone 1 and decided to ensure documentation and ke
 1. Dependency Injection: We have decoupled most dependencies. We have ensured that there is **no cyclic dependency** to ensure **smooth bottom-up testing** of our unit tests. Although there was a single dependency in the cases where the calendar and pdf generation depend on the itinerary stored in the class.
 
 2. Single Responsibility Principle: All our class components have a single responsibility allocated to them with all the code split between Profile.js, Register.js, Login.js, Intinerary.js, and UserFunctions.js. Each class Component is responsible for a **single responsibility** as evident by their names.
-
-
-
